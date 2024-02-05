@@ -1,4 +1,4 @@
-# Calculator Application [Fronted - 3]
+# Calculator Application [Fronted - 1]
 
 **In this frontend project, the front end of a calculator similar to the Apple calculator application has been developed.**
 
