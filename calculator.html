@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculator Mobile Application">
+    <meta name="keywords" content="app,mobile,calculator,mobile app, calculator mobile app">
+    <link rel="stylesheet" href="calculator.css">
+    <title>Calculator Application</title>
+</head>
+<body>
+    
+    <div class="app-container">
+
+        <button type="button" class="turn-mobile-btn" onclick="TurnMobilePhone()"></button>
+        
+        <!-- Mobile Container Start -->
+        <div class="mobile-container" id="mobileContainer" data-vertical="1">
+            <input type="text" name="resultText" id="resultText" class="result-text" readonly>
+            
+            <div class="keys-section">
+                <div class="advanced-keys-section hide" id="advancedKeySection">
+                    <button type="button" class="advanced-btn">(</button>
+                    <button type="button" class="advanced-btn">)</button>
+                    <button type="button" class="advanced-btn">mc</button>
+                    <button type="button" class="advanced-btn">m+</button>
+                    <button type="button" class="advanced-btn">m-</button>
+                    <button type="button" class="advanced-btn">mr</button>
+                    <button type="button" class="advanced-btn">2<sup>nd</sup></button>
+                    <button type="button" class="advanced-btn">x<sup>2</sup></button>
+                    <button type="button" class="advanced-btn">x<sup>3</sup></button>
+                    <button type="button" class="advanced-btn">x<sup>y</sup></button>
+                    <button type="button" class="advanced-btn">e<sup>x</sup></button>
+                    <button type="button" class="advanced-btn">10<sup>x</sup></button>
+                    <button type="button" class="advanced-btn"><sup>1<sub>/</sub></sup>x</button>
+                    <button type="button" class="advanced-btn">&#8730;</button>
+                    <button type="button" class="advanced-btn">&#8731;</button>
+                    <button type="button" class="advanced-btn"><sup>y</sup>&Sqrt;x</button>
+                    <button type="button" class="advanced-btn">ln</button>
+                    <button type="button" class="advanced-btn">log<sub>10</sub></button>
+                    <button type="button" class="advanced-btn">x!</button>
+                    <button type="button" class="advanced-btn">sin</button>
+                    <button type="button" class="advanced-btn">cos</button>
+                    <button type="button" class="advanced-btn">tan</button>
+                    <button type="button" class="advanced-btn">e</button>
+                    <button type="button" class="advanced-btn">EE</button>
+                    <button type="button" class="advanced-btn">Rad</button>
+                    <button type="button" class="advanced-btn">sinh</button>
+                    <button type="button" class="advanced-btn">cosh</button>
+                    <button type="button" class="advanced-btn">tanh</button>
+                    <button type="button" class="advanced-btn">&pi;</button>
+                    <button type="button" class="advanced-btn">Rand</button>
+                </div>
+                
+                <div class="normal-keys-section" id="normalKeySection">
+                    <button type="button" class="normal-light-btn" onclick="ClearDisplay()">AC</button>
+                    <button type="button" class="normal-light-btn">&PlusMinus;</button>
+                    <button type="button" class="normal-light-btn">%</button>
+                    <button type="button" class="normal-gold-btn" onclick="SetOperation('/')">&divide;</button>
+                    <button type="button" class="normal-gray-btn" onclick="AppendValue('7')">7</button>
+                    <button type="button" class="normal-gray-btn" onclick="AppendValue('8')">8</button>
+                    <button type="button" class="normal-gray-btn" onclick="AppendValue('9')">9</button>
+                    <button type="button" class="normal-gold-btn" onclick="SetOperation('*')">&times;</button>
+                    <button type="button" class="normal-gray-btn" onclick="AppendValue('4')">4</button>
+                    <button type="button" class="normal-gray-btn" onclick="AppendValue('5')">5</button>
+                    <button type="button" class="normal-gray-btn" onclick="AppendValue('6')">6</button>
+                    <button type="button" class="normal-gold-btn" onclick="SetOperation('-')">&minus;</button>    
+                    <button type="button" class="normal-gray-btn" onclick="AppendValue('1')">1</button>
+                    <button type="button" class="normal-gray-btn" onclick="AppendValue('2')">2</button>
+                    <button type="button" class="normal-gray-btn" onclick="AppendValue('3')">3</button>
+                    <button type="button" class="normal-gold-btn" onclick="SetOperation('+')">&plus;</button>
+                    <button type="button" class="normal-gray-btn" onclick="AppendValue('0')">0</button>
+                    <button type="button" class="normal-gray-btn" onclick="AppendDecimal()">&comma;</button>
+                    <button type="button" class="normal-gold-btn" onclick="CalculateResult()">&equals;</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>

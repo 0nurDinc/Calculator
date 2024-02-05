@@ -1,0 +1,256 @@
+:root{
+    --advancedBtnColor:#212121;
+    --lightBtnColor:#A5A5A5;
+    --goldBtnColor:#FF9F0A;
+    --grayBtnColor:#3F3F3F;
+
+    --appFont: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hide{
+    display: none !important;
+}
+
+
+.app-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.turn-mobile-btn{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    width: 50px;
+    height: 75px;
+    background-image: url(images/iphone.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: 1s;
+}
+
+.mobile-container{
+    width: 400px;
+    height: 800px;
+    background-image: url(images/mpVertical.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 70px;
+    padding: 0px 30px;
+}
+
+.result-text{
+    font: var(--appFont);
+    color: white;
+    font-size: 100px;
+    margin-top: 150px;
+    margin-right: 15px;
+    text-align: end;
+    margin-bottom: 20px;
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+
+.keys-section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.normal-keys-section > button.normal-light-btn:hover {
+    background-color: gray;
+    color: gainsboro;
+}
+
+.normal-keys-section > button.normal-gold-btn:hover {
+    background-color: gold;
+    color: black;
+}
+
+.normal-keys-section > button.normal-gray-btn:hover {
+    background-color: lightgray;
+    color: #212121;
+}
+
+
+.advanced-keys-section{
+    display: grid;
+    grid-template-columns: repeat(6,55px);
+    grid-template-rows: repeat(5,45px);
+    gap: 5px;
+    width: 100%;
+}
+
+.normal-keys-section{
+    display: grid;
+    grid-template-columns: repeat(4,75px);
+    grid-template-rows: repeat(5,75px);
+    row-gap: 15px;
+    column-gap: 13px;
+}
+
+.normal-keys-section > button{
+    font-size: 35px;
+    border: none;
+    border-radius: 85px;
+}
+
+.normal-keys-section > button:nth-child(17){
+    grid-column: 1/3;
+    text-align: start;
+    text-indent: 18%;
+}
+
+.normal-light-btn{
+    background-color: var(--lightBtnColor);
+}
+
+.normal-gold-btn{
+    background-color: var(--goldBtnColor);
+    color: white;
+}
+
+.normal-gray-btn{
+    background-color: var(--grayBtnColor);
+    color: white;
+}
+
+
+
+.rotate-mobile-container{
+    width: 800px;
+    height: 400px;
+    background-image: url(images/mpHorizontal.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 10px 55px;
+}
+
+
+.rotate-result-text{
+    padding: 30px 20px 10px;
+    font-size: 60px;
+    text-align: end;
+    color: white;
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+ 
+
+.rotate-key-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 250px;
+}
+
+
+
+.advanced-btn{
+   background-color: var(--advancedBtnColor);
+   color: gainsboro;
+   font-size: 15px;
+   border: none;
+   border-radius: 50%;
+}
+
+.advanced-btn:hover{
+    background-color: gray;
+}
+
+.rotate-normal-key-section{
+    width: 100%;
+    display: grid;
+    gap: 10px;
+    margin: 0 10px;
+    grid-template-columns: repeat(4,70px);
+    grid-template-rows: repeat(5,40px);
+}
+
+
+.rotate-normal-key-section > button {
+    font-size: 24px;
+    border: none;
+    border-radius: 50px;
+}
+
+.rotate-normal-key-section > button:nth-child(17){
+    grid-column: 1/3;
+}
+
+.rotate-normal-key-section > button.normal-light-btn:hover {
+    background-color: gray;
+    color: gainsboro;
+}
+
+.rotate-normal-key-section > button.normal-gold-btn:hover {
+    background-color: gold;
+    color: black;
+}
+
+.rotate-normal-key-section > button.normal-gray-btn:hover {
+    background-color: lightgray;
+    color: #212121;
+}
+
+
+
+/**************** Animation KeyFrames And Class Start ***********************/
+
+.left-rotate-animation{
+    animation-name: left90DegRotate;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+.right-rotate-animation{
+    animation-name: right90DegRotate;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+
+
+@keyframes left90DegRotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-90deg);
+    }
+    
+}
+
+
+@keyframes right90DegRotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(90deg);
+    }
+    
+}
+
